@@ -39,3 +39,13 @@ TEST_CASE("To check if battery temperature is generated")
   
   REQUIRE(memcmp(RandomData, ExpectedData, sizeof(RandomData)) == 0);
 }
+
+TEST_CASE("Finally integrate the generated Charging current and Battery temperature values into CSV format")
+{
+  char ToConsoleOutput[1000];
+  char ExpectedOutput[] = {"0, 28.0\n", "0.5, 28.1\n", "1.0, 28.2\n", "1.5, 28.3\n", "2.0, 28.4\n", "2.5, 28.5\n", "3.0, 28.6\n", "3.5, 28.7\n", "4.0, 28.8\n", "4.5, 28.9\n"};
+  
+  GenerateCurrentTemperaturePairToCsv(ToConsoleOutput);
+  
+  strcmp(ToConsoleOutput, ExpectedOutput);
+}
