@@ -8,7 +8,7 @@ void GenerateLinearExpValues(float* RandomData, linerExpParameters LinearExpress
   
   for(LoopCount = 0; LoopCount < NumOfValues; LoopCount++)
   {
-    x = LoopCount+1;
+    x = LoopCount;
     y = ((LinearExpressionParam.slope*x) + LinearExpressionParam.xIntercept); // y = mx+c
     RandomData[LoopCount] = ROUND_OFF_TO_2_DECIMAL(y);
   }
