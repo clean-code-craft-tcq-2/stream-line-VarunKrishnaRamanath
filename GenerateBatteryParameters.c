@@ -14,3 +14,17 @@ void GenerateLinearExpValues(float* RandomData, linerExpParameters LinearExpress
   }
   
 }
+
+void GenerateChargingCurrentValues(float* RandomData, int NumOfValuesToBeGenerated)
+{
+  linerExpParameters LinearExpressionParam = {0.5, 0.0}; // with slope = 0.5A and xIntercept = 0A
+  
+  GenerateLinearExpValues(RandomData, LinearExpressionParam, NumOfValuesToBeGenerated);
+}
+
+void GenerateBatteryTemperatureValues(float* RandomData, int NumOfValuesToBeGenerated)
+{
+  linerExpParameters LinearExpressionParam = {0.1, 28.0}; // with slope = 0.1 and xIntercept = 28 (deg)
+  
+  GenerateLinearExpValues(RandomData, LinearExpressionParam, NumOfValuesToBeGenerated);
+}
