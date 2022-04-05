@@ -9,3 +9,5 @@ typedef struct{
 }linerExpParameters;
 
 void GenerateLinearExpValues(float* RandomData, linerExpParameters LinearExpressionParam, int NumOfValues);
+void GenerateChargingCurrentValues(float* RandomData, int NumOfValuesToBeGenerated);
+void GenerateBatteryTemperatureValues(float* RandomData, int NumOfValuesToBeGenerated);
