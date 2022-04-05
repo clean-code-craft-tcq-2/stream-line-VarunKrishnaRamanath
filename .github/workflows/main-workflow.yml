@@ -22,7 +22,7 @@ jobs:
       run: ./SenderSource
       
     - name: build_SenderExecutable
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o SenderExecutable SendBatteryParameters.c GenerateBatteryParameters.c
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o SenderExecutable SendBatteryParametersToConsole.c GenerateBatteryParameters.c
       
     - name: run_SenderExecutable
       run: ./SenderExecutable > Sender.txt
