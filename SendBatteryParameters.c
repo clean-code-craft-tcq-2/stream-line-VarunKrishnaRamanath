@@ -3,7 +3,9 @@
 int main()
 {
  char ToConsole[2000];
- GenerateCurrentTemperaturePairToCsv(char* ToConsole, int NumOfValuesToBeGenerated);
+ int NumOfValuesToBeGenerated = 50;
+ 
+ GenerateCurrentTemperaturePairToCsv(ToConsole, NumOfValuesToBeGenerated);
  printf("%s",ToConsole);
  return 0; 
 }
