@@ -1,6 +1,6 @@
 #include "GenerateBatteryParameters.h"
 
-void main()
+int main()
 {
- return; 
+ return 0; 
 }
