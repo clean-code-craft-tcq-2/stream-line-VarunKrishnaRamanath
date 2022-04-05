@@ -31,7 +31,7 @@ void GenerateBatteryTemperatureValues(float* RandomData, int NumOfValuesToBeGene
 
 void GenerateCurrentTemperaturePairToCsv(char* ToConsole, int NumOfValuesToBeGenerated)
 {
-  char Tempchar[50];
+  char Tempchar[50] = "Current in A, Temperature in degC\n";
   int Loop;
   float CurrentArray[NumOfValuesToBeGenerated];
   float TemperatureArray[NumOfValuesToBeGenerated];
@@ -39,6 +39,7 @@ void GenerateCurrentTemperaturePairToCsv(char* ToConsole, int NumOfValuesToBeGen
   GenerateChargingCurrentValues(CurrentArray, NumOfValuesToBeGenerated);
   GenerateBatteryTemperatureValues(TemperatureArray, NumOfValuesToBeGenerated);
   
+  strcat(ToConsole, Tempchar); // copy the header first
   for(Loop = 0; Loop < NumOfValuesToBeGenerated;Loop++)
   {
     sprintf(Tempchar, "%0.2f, %0.2f\n", CurrentArray[Loop], TemperatureArray[Loop]);
