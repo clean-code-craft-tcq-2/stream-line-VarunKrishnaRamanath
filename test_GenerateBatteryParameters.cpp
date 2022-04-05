@@ -43,7 +43,7 @@ TEST_CASE("To check if battery temperature is generated")
 TEST_CASE("Finally integrate the generated Charging current and Battery temperature values into CSV format")
 {
   char ToConsoleOutput[1000];
-  char ExpectedOutput[] = {"0, 28.0\n", "0.5, 28.1\n", "1.0, 28.2\n", "1.5, 28.3\n", "2.0, 28.4\n", "2.5, 28.5\n", "3.0, 28.6\n", "3.5, 28.7\n", "4.0, 28.8\n", "4.5, 28.9\n"};
+  char ExpectedOutput[] = {"0.00,  28.00\n0.50,  28.10\n1.00,  28.20\n1.50,  28.30\n2.00,  28.40\n2.50,  28.50\n3.00,  28.60\n3.50,  28.70\n4.00,  28.80\n4.50,  28.90\n"};
   int NumOfValuesToBeGenerated = 10;
   
   GenerateCurrentTemperaturePairToCsv(ToConsoleOutput, NumOfValuesToBeGenerated);
