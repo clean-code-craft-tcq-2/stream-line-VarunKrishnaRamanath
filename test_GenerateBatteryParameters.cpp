@@ -48,5 +48,5 @@ TEST_CASE("Finally integrate the generated Charging current and Battery temperat
   
   GenerateCurrentTemperaturePairToCsv(ToConsoleOutput, NumOfValuesToBeGenerated);
   
-  strcmp(ToConsoleOutput, ExpectedOutput);
+  REQUIRE(strcmp(ToConsoleOutput, ExpectedOutput) == 0);
 }
