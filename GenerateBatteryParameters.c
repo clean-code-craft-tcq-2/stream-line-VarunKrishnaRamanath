@@ -28,3 +28,20 @@ void GenerateBatteryTemperatureValues(float* RandomData, int NumOfValuesToBeGene
   
   GenerateLinearExpValues(RandomData, LinearExpressionParam, NumOfValuesToBeGenerated);
 }
+
+void GenerateCurrentTemperaturePairToCsv(char* ToConsole, int NumOfValuesToBeGenerated)
+{
+  char Tempchar[50];
+  int Loop;
+  float CurrentArray[NumOfValuesToBeGenerated];
+  float TemperatureArray[NumOfValuesToBeGenerated];
+  
+  GenerateChargingCurrentValues(CurrentArray, NumOfValuesToBeGenerated);
+  GenerateBatteryTemperatureValues(TemperatureArray, NumOfValuesToBeGenerated);
+  
+  for(Loop = 0; Loop < NumOfValuesToBeGenerated;Loop++)
+  {
+    sprintf(Tempchar, "%0.2f, %0.2f\n", CurrentArray[Loop], TemperatureArray[Loop]);
+    strcat(ToConsole, Tempchar);
+  }
+}
