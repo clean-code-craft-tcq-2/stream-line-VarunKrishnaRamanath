@@ -19,7 +19,7 @@ jobs:
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o SenderSource test_GenerateBatteryParameters.cpp GenerateBatteryParameters.c
     
     - name: build_ReceiverSource
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o ReceiverSource test_ReceiveBatteryParameters.cpp RceiveBatteryParameters.c
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o ReceiverSource test_ReceiveBatteryParameters.cpp ReceiveBatteryParameters.c
     
     - name: run_SenderSource
       run: ./SenderSource
