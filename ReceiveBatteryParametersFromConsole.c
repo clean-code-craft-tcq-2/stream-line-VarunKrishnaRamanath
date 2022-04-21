@@ -1,6 +1,8 @@
 #include <string.h>
 #include <stdio.h>
 
+void receiveDataFromConsole(float* temperature, float* chargeRate);
+
 void receiveDataFromConsole(float* temperature, float* chargeRate) {
     char unusedData[300];
     for(int j = 0; j < 50; j++){
