@@ -1,3 +1,5 @@
+#include <string.h>
+#include <stdio.h>
 #include "ReceiveBatteryParameters.h"
 
 void receiveDataFromConsole(float* temperature, float* chargeRate);
