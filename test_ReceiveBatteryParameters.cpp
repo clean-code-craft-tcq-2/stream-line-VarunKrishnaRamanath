@@ -3,7 +3,7 @@
 #include "test/catch.hpp"
 #include <string.h>
 #include <stdio.h>
-#include "ReceiveBatteryParametersFromConsole.h"
+#include "ReceiveBatteryParameters.h"
 
 TEST_CASE("Test for Receiever to read from console") 
 {
