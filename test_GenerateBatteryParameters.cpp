@@ -40,7 +40,7 @@ TEST_CASE("To check if battery temperature is generated")
   REQUIRE(memcmp(RandomData, ExpectedData, sizeof(RandomData)) == 0);
 }
 
-TEST_CASE("Finally integrate the generated Charging current and Battery temperature values into CSV format")
+/*TEST_CASE("Finally integrate the generated Charging current and Battery temperature values into CSV format")
 {
   char ToConsoleOutput[1000];
   char ExpectedOutput[] = {"0.00, 28.00\n0.50, 28.10\n1.00, 28.20\n1.50, 28.30\n2.00, 28.40\n2.50, 28.50\n3.00, 28.60\n3.50, 28.70\n4.00, 28.80\n4.50, 28.90\n"};
@@ -49,4 +49,4 @@ TEST_CASE("Finally integrate the generated Charging current and Battery temperat
   GenerateCurrentTemperaturePairToCsv(ToConsoleOutput, NumOfValuesToBeGenerated);
   
   REQUIRE(strcmp(ToConsoleOutput, ExpectedOutput) == 0);
-}
+}*/
