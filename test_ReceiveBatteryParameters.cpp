@@ -2,7 +2,6 @@
 
 #include "test/catch.hpp"
 #include <string.h>
-#include "ReceiveBatteryParameters.h"
 #include <stdio.h>
 
 TEST_CASE("To test if 4 values")
