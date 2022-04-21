@@ -23,6 +23,6 @@ void receiveDataFromConsole(float* temperature, float* chargeRate) {
 int main()
 {
   float temperature[100],chargeRate[100] = {0};
-  readDataFromConsole(temperature,chargeRate);
+  receiveDataFromConsole(temperature,chargeRate);
   return 0; 
 }
