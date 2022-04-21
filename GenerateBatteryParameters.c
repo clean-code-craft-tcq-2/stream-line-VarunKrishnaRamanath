@@ -32,6 +32,7 @@ void GenerateBatteryTemperatureValues(float* RandomData, int NumOfValuesToBeGene
 void GenerateCurrentTemperaturePairToCsv(char* ToConsole, int NumOfValuesToBeGenerated)
 {
   //char Tempchar[50] = "Current in A, Temperature in degC\n";
+  char Tempchar[50] = {0};
   int Loop;
   float CurrentArray[NumOfValuesToBeGenerated];
   float TemperatureArray[NumOfValuesToBeGenerated];
