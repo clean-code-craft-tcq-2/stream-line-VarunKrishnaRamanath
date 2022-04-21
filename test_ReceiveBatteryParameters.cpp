@@ -16,3 +16,10 @@ TEST_CASE("Test for Receiever to read from console")
   REQUIRE( (chargeRate[i] - expectedChargeRate[i]) <= 0.001);
   }
 }
+
+TEST_CASE("Test for Min and max values of battery parameters in the stream") 
+{
+  float temp[50], chargeRate[50]  = {0};
+  receiveDataFromConsole(temp,chargeRate);                                                              
+  printMinMaxValuesInStream(temp,chargeRate);
+}
