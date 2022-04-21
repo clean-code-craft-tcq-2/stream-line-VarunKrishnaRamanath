@@ -16,6 +16,10 @@ void receiveDataFromConsole(float* temperature, float* chargeRate) {
         scanf("%50s", unusedData);
         scanf("%50s", unusedData);
         scanf("%f", &chargeRate[j]);
+        //printf("%.2f \t %.2f\n",temperature[j],chargeRate[j]);
+    }
+    for(int j = 0; j < 50; j++)
+    {
         printf("%.2f \t %.2f\n",temperature[j],chargeRate[j]);
     }
    
