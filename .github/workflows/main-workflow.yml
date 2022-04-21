@@ -25,7 +25,7 @@ jobs:
       run: ./SenderSource
       
     - name: run_ReceiverSource
-      run: ./ReceiverSource
+      run: ./SenderSource | ./ReceiverSource
       
     - name: build_SenderExecutable
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o SenderExecutable SendBatteryParametersToConsole.c GenerateBatteryParameters.c
